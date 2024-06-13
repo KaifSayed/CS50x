@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Checks the answer to the questions
+            function checkMCQ(Correct)
+            {
+            const result = document.querySelector('#multipleChoiceResult');
+            const buttons = document.querySelectorAll('.multipleChoiceButton');
+
+            buttons.forEach(button =>
+            {
+                button.disabled = true; // Disable buttons to prevent multiple clicks
+                if (button.dataset.correct === 'true')
+                {
+                    button.style.backgroundColor = 'green';
+                }
+                else if (Correct)
+                {
+                    button.style.backgroundColor = 'red';
+                }
+            });
+
+            if (Correct)
+            {
+                result.innerText = 'Correct!';
+                result.style.color = 'green';
+            }
+            else
+            {
+                result.innerText = 'Incorrect';
+                result.style.color = 'red';
+            }
+        }
+        function checkFreeResponse()
+        {
+            const input = document.querySelector('#freeResponseInput');
+            const result = document.querySelector('#freeResponseResult');
+            input.disabled = true; // Disable input field to prevent further input
+            const userAnswer = input.value.toLowerCase();
+            const correctAnswer = 'new delhi';
+
+            if (userAnswer === correctAnswer)
+            {
+                input.style.backgroundColor = 'green';
+                result.innerText = 'Correct!';
+                result.style.color = 'green';
+            }
+            else
+            {
+                input.style.backgroundColor = 'red';
+                result.innerText = 'Incorrect';
+                result.style.color = 'red';
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Multiple choice questions -->
+                <h3>What is the capital of France?</h3>
+                <button class="multipleChoiceButton" data-correct="false" onclick="checkMCQ(false)">Berlin</button>
+                <button class="multipleChoiceButton" data-correct="true" onclick="checkMCQ(true)">Paris</button>
+                <button class="multipleChoiceButton" data-correct="false" onclick="checkMCQ(false)">Madrid</button>
+                <button class="multipleChoiceButton" data-correct="false" onclick="checkMCQ(false)">Barcelona</button>
+                <p id="multipleChoiceResult"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Free response questions -->
+                <h3>What is the capital of India?</h3>
+                <input type="text" id="freeResponseInput">
+                <button onclick="checkFreeResponse()">Submit</button>
+                <p id="freeResponseResult"></p>
+            </div>
+        </div>
+    </body>
+</html>
