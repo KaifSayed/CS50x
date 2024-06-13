@@ -1,0 +1,8 @@
+
+The average of energy, valence and danceability of the top 100 songs of one listener can characterize this person audio aura,
+which seems to be the most streamed songs from 2018.
+
+
+While the calculated audio aura based on average musical features provides a simple representation of a listener's preferences,
+but the better way would be allowing users to provide feedback on the accuracy of the calculated audio aura,
+ensuring that it aligns with their perceived mood and preferences.
