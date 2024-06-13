@@ -1,0 +1,106 @@
+<!-- The 'Contact' page -->
+
+{% extends "layout.html" %}
+
+{% block head %}
+    <!-- Inherit from 'layout.html' -->
+    {{ super() }}
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../static/js/particles.js" defer></script>
+{% endblock %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+    <!-- Particles Background -->
+    <div id="particles-js" class="background position-fixed w-100 h-100 top-0 start-0"></div>
+    <!-- End of Particles Background -->
+    <!-- Main Content -->
+    <div class="container contact mb-5 pb-5">
+        <!-- Title -->
+        <div class="row mb-3">
+            <div class="col-md-12 text-center">
+                <h1 class="page-title">CONTACT ME</h1>
+            </div>
+        </div>
+        <!-- End of Title -->
+        <!-- Contact Form -->
+        <div class="card contact-card card-design px-5 py-5">
+            <div class="contact-container">
+                <div class="row">
+                  <div class="col-lg-7 mx-auto">
+                    <div class="contact mt-2 mx-auto p-4">
+                      <div class="contact-body">
+                        <div class = "container">
+                          <form action="https://formspree.io/f/xdoqnbrd" method="POST" id="contact-form" role="form">
+                        <div class="controls">
+                          <!-- 1st Row -->
+                          <div class="row">
+                            <!-- First Name Box -->
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="firstname">First Name</label>
+                                <input id="firstname" type="text" name="firstname" class="form-control" placeholder="First Name" required data-error="Please enter your first name.">
+                              </div>
+                            </div>
+                            <!-- Last Name Box -->
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="lastname">Last Name</label>
+                                <input id="lastname" type="text" name="lastname" class="form-control" placeholder="Last Name" required data-error="Please enter your last name.">
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 2nd Row -->
+                          <div class="row">
+                            <!-- Email Box -->
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" name="email" class="form-control" placeholder="Email" required data-error="Please enter your email.">
+                              </div>
+                            </div>
+                            <!-- Subject Box -->
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="subject">Subject</label>
+                                  <select id="subject" name="subject" class="form-control" required data-error="Please choose a subject.">
+                                    <option value="" selected disabled>Choose a Subject</option>
+                                    <option >Work Opportunity</option>
+                                    <option >Request a CV</option>
+                                    <option >Request a Phone Number</option>
+                                    <option >Other</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          <!-- 3rd Row -->
+                          <div class="row">
+                            <!-- Message Box -->
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Message" rows="4" required data-error="Please write a message."></textarea>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <input type="submit" class="button btn btn-secondary" value="Send Message">
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Contact Form -->
+    </div>
+    <!-- End of Main Content -->
+{% endblock %}
+

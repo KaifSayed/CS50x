@@ -1,0 +1,353 @@
+/*  GENERAL CSS   */
+
+:root {
+    --main-color: rgb(74, 64, 99);
+    --links-color: rgb(191, 172, 200);
+    --links-hover-color: rgb(241, 217, 252);
+    --highlights-color: rgb(67, 5, 126);
+    --highlights-v2-color: rgb(240, 160, 11);;
+    --buttons-color: rgba(255, 178, 13, 0.7);
+    --buttons-hover-color: rgba(245, 191, 76, 0.7);
+}
+
+body {
+    background: rgb(200, 198, 215);
+    font-family: "Lora", serif;
+}
+
+.background {
+    z-index: -1;
+}
+
+/*  BUTTONS  */
+
+.btn {
+    background-color: var(--buttons-color);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--buttons-hover-color);
+    transform: scale(1.05);
+}
+
+.btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*  LOADING   */
+
+.loading {
+    width: 600px;
+    height: 36px;
+    left: 50%;
+    top: 40%;
+    margin-left: -300px;
+    overflow: visible;
+    cursor: default;
+}
+
+.loading div {
+    position: absolute;
+    width: 20px;
+    height: 66px;
+    opacity: 0;
+    animation: move 2s linear infinite;
+    transform: rotate(180deg);
+    color: var(--highlights-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.loading div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loading div:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loading div:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.loading div:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.loading div:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    35% {
+        left: 41%;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    65% {
+        left: 59%;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+}
+
+/*  CARDS     */
+
+.card-design {
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(6.8px);
+}
+
+.inner-card-design {
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*  HEADER   */
+
+.logo {
+    max-width: 100px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.10);
+}
+
+.navbar {
+    background-color: var(--main-color);
+}
+
+.navbar .nav-link {
+    color: var(--links-color);
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--links-hover-color) !important;
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    background-color: var(--links-color);
+    transition: 0.3s;
+}
+
+.navbar-toggler:hover {
+    background-color: var(--links-hover-color);
+}
+
+.is-active {
+    border-bottom: 2px solid var(--links-color);
+}
+
+.is-active:hover {
+    border-bottom: 2px solid var(--links-hover-color);
+}
+
+/*  FOOTER   */
+
+.footer {
+    background-color: var(--main-color);
+}
+
+.social-icon {
+    color: var(--buttons-color);
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--buttons-hover-color) !important;
+    transform: scale(1.10);
+}
+
+/*  HOME   */
+
+
+.description {
+    margin-top: 15rem;
+}
+
+@media (max-width: 576px) {
+    .description {
+        margin-top: 10rem;
+    }
+}
+
+.description .main-text {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.description .main-text .name {
+    color: var(--highlights-v2-color);
+}
+
+.description .secondary-text {
+    font-size: 30px;
+}
+
+.description-image {
+    border-radius: 50%;
+}
+
+#typing-text {
+    color: var(--highlights-color);
+    font-weight: 700;
+}
+
+/*  ABOUT   */
+
+.about {
+    margin-top: 10rem;
+}
+
+.about .page-title {
+    color: var(--highlights-color);
+    font-weight: 900;
+}
+
+.about .description-card {
+    min-height: 500px;
+    max-height: 1250px;
+}
+
+.about .education-card {
+    min-height: 500px;
+    max-height: 1250px;
+}
+
+.about .inner-card {
+    transition: 0.3s;
+}
+
+.about .description-card .inner-card:hover {
+    transform: scale(1.025);
+}
+
+.about .education-card .inner-card:hover {
+    transform: scale(1.05);
+}
+
+.about .description-card .arrow {
+    color: var(--highlights-color);
+}
+
+.about .education-card .school-name {
+    color: var(--highlights-color);
+    font-weight: 600;
+}
+
+.about .first-paragraph {
+    color: var(--highlights-color);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.about .paragraph {
+    font-size: 17px;
+}
+
+/*  SKILLS   */
+
+.skills {
+    margin-top: 10rem;
+}
+
+.skills .page-title {
+    color: var(--highlights-color);
+    font-weight: 900;
+}
+
+.skills .inner-card {
+    transition: 0.3s;
+}
+
+.skills .inner-card:hover {
+    transform: scale(1.10);
+}
+
+.skills .card-title {
+    color:var(--highlights-color);
+    font-weight: 700;
+}
+
+.skills .inner-card .card-title {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.skills .inner-card .img-fluid {
+    max-width: 50px;
+}
+
+/*  CONTACT  */
+
+.contact {
+    margin-top: 10rem;
+}
+
+.contact .page-title {
+    color: var(--highlights-color);
+    font-weight: 900;
+}
+
+.contact .form-control {
+    background-color: rgba(216, 216, 216, 0.5);
+    border-color: rgba(216, 216, 216, 0.7);
+    border-radius: 35px;
+    padding-left: 2rem;
+}
+
+.contact .form-control:focus {
+    border-color: rgba(216, 216, 216, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(63, 21, 60, 0.25);
+}
+
+.contact .form-group .arrow {
+    color: var(--highlights-color);
+}
+
+select option {
+    background-color: rgba(233, 233, 233, 0.5);
+    border-radius: 35px;
+}
+
+/*  RESPONSE   */
+
+.response {
+    margin-top: 10rem;
+}
+
+.response .page-title {
+    color: var(--highlights-color);
+    font-weight: 900;
+}

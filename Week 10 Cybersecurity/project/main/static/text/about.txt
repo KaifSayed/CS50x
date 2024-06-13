@@ -1,0 +1,18 @@
+ I'm a 18 year old programmer based in Mumbai, India.
+
+    I'm currently studying Bachelor of Computer Application in Mumbai.
+It is a IT course provided by Maharashtra University, but I have been
+interested in coding way before high school.
+
+    My favorite part of coding were always been game development and
+those I started learning on Unity with C#. It waschallenging but with
+the help of YouTube and made some games. The starting games were not
+all that special so I try making more hard games and for that I got
+introduce with A.I. mainly for making enemy AI and with that my real
+coding journey started.
+
+   I'm currently seeking new opportunities to further my growth and
+learn more about software engineering, artificial intelligence and
+game development.
+
+   Please feel free to reach out to me if you'd like to known more.

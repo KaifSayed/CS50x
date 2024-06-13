@@ -1,0 +1,100 @@
+<!-- The 'Skills' page -->
+
+{% extends "layout.html" %}
+
+{% block head %}
+    <!-- Inherit from 'layout.html' -->
+    {{ super() }}
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../static/js/particles.js" defer></script>
+{% endblock %}
+
+{% block title %}
+    Skills
+{% endblock %}
+
+{% block main %}
+    <!-- Particles Background -->
+    <div id="particles-js" class="background position-fixed w-100 h-100 top-0 start-0"></div>
+    <!-- End of Particles Background -->
+    <!-- Main Content -->
+    <div class="container skills mb-5 pb-5">
+        <!-- Title -->
+        <div class="row mb-3">
+            <div class="col-md-12 text-center">
+                <h1 class="page-title">SKILLS</h1>
+            </div>
+        </div>
+        <!-- End of Title -->
+        <!-- Cards -->
+        <div class="row">
+            <!-- Languages Card -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card languages-card card-design">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">Languages</h5>
+                        <div class="row">
+                            {% for language in skills[0] %}
+                                <div class="col-md-4 mb-3">
+                                    <div class="card inner-card inner-card-design">
+                                        <img src="{{ language.image }}" class="img-fluid card-img-top mx-auto d-block mt-2">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">{{ language.title }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Languages Card -->
+            <!-- Frameworks & Libraries Card -->
+            <div class="col-md-4 d-flex align-items-stretch my-3 my-md-0">
+                <div class="card frameworks-card card-design flex-fill">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">Frameworks & Libraries</h5>
+                        <div class="row">
+                            {% for framework in skills[1] %}
+                                <div class="col-md-4 mb-3">
+                                    <div class="card inner-card inner-card-design">
+                                        <img src="{{ framework.image }}" class="img-fluid card-img-top mx-auto d-block mt-2">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">{{ framework.title }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Frameworks & Libraries Card -->
+            <!-- Other Technologies Card -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card technologies-card card-design">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">Other Technologies</h5>
+                        <div class="row">
+                            {% for technology in skills[2] %}
+                                <div class="col-md-4 mb-3">
+                                    <div class="card inner-card inner-card-design">
+                                        <img src="{{ technology.image }}" class="img-fluid card-img-top mx-auto d-block mt-2">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">{{ technology.title }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Other Technologies Card -->
+        </div>
+        <!-- End of Cards -->
+    </div>
+    <!-- End of Main Content -->
+{% endblock %}
+

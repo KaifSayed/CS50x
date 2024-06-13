@@ -1,0 +1,87 @@
+<!-- The 'About' page -->
+
+{% extends "layout.html" %}
+
+{% block head %}
+    <!-- Inherit from 'layout.html' -->
+    {{ super() }}
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../static/js/particles.js" defer></script>
+{% endblock %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+    <!-- Particles Background -->
+    <div id="particles-js" class="background position-fixed w-100 h-100 top-0 start-0"></div>
+    <!-- End of Particles Background -->
+    <!-- Main Content -->
+    <div class="container about mb-5 pb-5">
+        <!-- Title -->
+        <div class="row mb-3">
+            <div class="col-md-12 text-center">
+                <h1 class="page-title">ABOUT ME</h1>
+            </div>
+        </div>
+        <!-- End of Title -->
+        <!-- Row -->
+        <div class="row flex-wrap align-content-center justify-content-center">
+            <!-- 1st Column -->
+            <div class="col-md-6 d-flex">
+                <div class="card description-card card-design">
+                    <div class="card-body">
+                        <div class="border-0 mb-3">
+                            <div class="card-body text-center">
+                                <p class="first-paragraph">{{ content[0] }}</p>
+                            </div>
+                        </div>
+                        <div class="card inner-card inner-card-design w-100">
+                            <div class="card-body">
+                                {% for paragraph in content[1:] %}
+                                    <p class="paragraph"><i class="arrow bx bxs-right-arrow"></i>{{ paragraph }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of 1st Column -->
+            <!-- 2nd Column -->
+            <div class="col-md-3 mt-md-0 mt-4 d-flex">
+                <div class="card education-card card-design flex-grow-1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="border-0 mb-3">
+                            <div class="card-body text-center">
+                                <p class="first-paragraph">Development Education</p>
+                            </div>
+                        </div>
+                        <div class="card inner-card inner-card-design mb-3 w-100 mx-auto">
+                            <div class="card-body text-center">
+                                <strong class="paragraph"><i class="school-name bx bxs-school"> IT School</i></strong>
+                                <p class="paragraph">Doing my 2 year of BCA</p>
+                                <p class="text-muted">May 2022 - Present</p><br>
+                            </div>
+                        </div>
+                        <div class="card inner-card inner-card-design mb-3 w-100 mx-auto">
+                            <div class="card-body text-center">
+                                <strong class="paragraph"><i class="school-name bx bx-library"> HarvardX</i></strong>
+                                <p class="paragraph">CS50x - Introduction to Computer Science</p>
+                                <p class="text-muted">Oct 2023 - Present</p>
+                            </div>
+                        </div>
+                        <button class="btn mt-auto mx-auto w-100">
+                            <a href="{{ url_for('contact') }}">CONTACT ME <i class="bx bx-right-arrow-circle px-2"></i></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of 2nd Column -->
+        </div>
+        <!-- End of Row -->
+    </div>
+    <!-- End of Main Content -->
+{% endblock %}
+
