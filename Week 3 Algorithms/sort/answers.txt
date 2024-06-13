@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Sort1 performs poorly on reversed input but performs well on already sorted input. This inefficient behavior is typical of bubble sort.
+
+sort2 uses: Merge Sort
+
+How do you know?: Sort2 consistently performs well on all inputs, suggesting a stable and efficient sorting algorithm like merge sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: Sort3 performs consistently slow on all inputs, suggesting a quadratic or low time complexity, which is characteristics of selection sort.
