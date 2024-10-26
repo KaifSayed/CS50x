@@ -1,0 +1,1 @@
+- 👋 Hi there, It my solutions of Harvard's CS50x questions and project.
